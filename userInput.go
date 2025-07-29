@@ -22,6 +22,12 @@ func userInput(usingCurrency string, amount float64, requiredCurrency string) (s
 	fmt.Scan(&amount)
 
 	fmt.Print("Выберете целевую валюту: ")
+	for _, elem := range allCurrency{
+		if strings.ToLower(requiredCurrency) == strings.ToLower(elem){
+			continue
+		}
+		fmt.Println(elem)
+	}
 	requiredCurrency, err = bufio.NewReader(os.Stdin).ReadString('\n')
 	requiredCurrency = strings.TrimSpace(requiredCurrency)
 	if err != nil {

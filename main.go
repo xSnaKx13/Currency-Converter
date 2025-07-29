@@ -8,7 +8,8 @@ var amount float64
 
 func main() {
 	for {
-		fmt.Println("Введите имеющуюся валюту")
+		fmt.Println("__- Конвертер валют -__")
 		userInput(usingCurrency, amount, requiredCurrency)
+		
 	}
 }
