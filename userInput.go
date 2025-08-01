@@ -10,15 +10,17 @@ import (
 
 func userInput(usingCurrency *string, requiredCurrency *string, amount *float64) (err error) {
 	for {
-		fmt.Print("Введите вашу валюту: ")
+		fmt.Print("Введите вашу валюту:  ")
 		*usingCurrency, _ = bufio.NewReader(os.Stdin).ReadString('\n')
 		*usingCurrency = strings.TrimSpace(*usingCurrency)
+		*usingCurrency = strings.ToLower(*usingCurrency)
 
-		fmt.Print("Введите целевую валюту: ")
+		fmt.Print("Введите целевую валюту:  ")
 		*requiredCurrency, _ = bufio.NewReader(os.Stdin).ReadString('\n')
 		*requiredCurrency = strings.TrimSpace(*requiredCurrency)
+		*requiredCurrency = strings.ToLower(*requiredCurrency)
 
-		fmt.Print("Введите обменную сумму")
+		fmt.Print("Введите обменную сумму:  ")
 		amountStr, _ := bufio.NewReader(os.Stdin).ReadString('\n')
 		amountStr = strings.TrimSpace(amountStr)
 
