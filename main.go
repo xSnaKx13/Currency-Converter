@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	var rates *map[string]map[string]float64
-	currency(rates)
+	var rates map[string]map[string]float64
+	currency(&rates)
 	var allCurrency = []string{"Rub", "Eur", "Yuan", "Usd"}
 	var usingCurrency, requiredCurrency string
 	var amount float64
@@ -18,7 +18,7 @@ func main() {
 			fmt.Println(errInput)
 			continue
 		}
-		rate, errCurrency := (*rates)[usingCurrency][requiredCurrency]
+		rate, errCurrency := rates[usingCurrency][requiredCurrency]
 		if !errCurrency {
 			fmt.Println("Курс не найден!\nПроверьте ввод валют")
 			continue
