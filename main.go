@@ -10,7 +10,7 @@ func main() {
 	var amount float64
 
 	for {
-		printAllCurrency(allCurrency)
+		printAllCurrency(&allCurrency)
 		errInput := userInput(&usingCurrency, &requiredCurrency, &amount)
 		if errInput != nil {
 			fmt.Println(errInput)
