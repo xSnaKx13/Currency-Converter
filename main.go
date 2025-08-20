@@ -5,6 +5,8 @@ import (
 )
 
 func main() {
+	var rates map[string]map[string]float64
+	currency(&rates)
 	var allCurrency = []string{"Rub", "Eur", "Yuan", "Usd"}
 	var usingCurrency, requiredCurrency string
 	var amount float64

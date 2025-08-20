@@ -1,6 +1,8 @@
 package main
 
-var rates = map[string]map[string]float64{
+func currency(rates *map[string]map[string]float64){
+
+*rates = map[string]map[string]float64{
 	"rub": {
 		"usd":  0.0109,
 		"eur":  0.0101,
@@ -21,4 +23,5 @@ var rates = map[string]map[string]float64{
 		"usd":  1.08,
 		"yuan": 7.78,
 	},
+}
 }
